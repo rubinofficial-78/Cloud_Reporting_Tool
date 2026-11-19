@@ -1,0 +1,23 @@
+{
+  "name": "@cloud-reporting/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/copy-index.mjs && esbuild src/main.tsx --bundle --outdir=dist/assets --entry-names=app --loader:.css=css --servedir=dist --serve=5173 --watch=forever",
+    "build": "tsc --noEmit && node scripts/copy-index.mjs && esbuild src/main.tsx --bundle --minify --outdir=dist/assets --entry-names=app --loader:.css=css"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "lucide-react": "^1.75.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.18.6"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+**/dist/
+*.tsbuildinfo
+**/.env
+**/.env.*
+!**/.env.example
+backend/storage/reports/
+backend/credentials/
+backend/*service-account*.json
+backend/*service_account*.json
+*.log
+.DS_Store
